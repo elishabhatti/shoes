@@ -2,7 +2,15 @@ git clone https://github.com/elishabhatti/shoes.git
 
 cd shoes
 
-npm i 
+cd client
+
+npm i
+
+npm run dev
+
+cd server
+
+npm i
 
 add .env
 
