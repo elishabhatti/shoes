@@ -165,16 +165,9 @@ const Home = () => {
         className="relative my-5 overflow-hidden rounded-3xl shadow-xl"
       >
         <img
-<<<<<<< HEAD
-          className="h-72 sm:h-96 md:h-[500px] lg:h-[550px] w-full object-cover brightness-[0.85]"
-          src="
-          https://cloudfront-us-east-2.images.arcpublishing.com/reuters/NKYZ3DCPBRMHVL3LP65XEHONXA.jpg"
-          alt="Sneaker Showcase"
-=======
           className="h-64 sm:h-96 md:h-[500px] lg:h-[550px] w-full object-cover brightness-[0.85] rounded-lg"
-          src="/images/home-banner.webp"
-          alt="Scenic view of plants"
->>>>>>> ff8573d85917c6ea07d4dc1df699d5d9c17a1e67
+          src="https://5.imimg.com/data5/SELLER/Default/2023/3/WM/WZ/QT/48282696/supermarket-display-shoes-rack-500x500.jpg"
+          alt="Scenic view of sneakers"
         />
         <h1
           ref={headingRef}
@@ -253,7 +246,6 @@ const Home = () => {
         <div className="flex justify-center items-center h-64">
           <LoadingSpinner />
         </div>
-<<<<<<< HEAD
       ) : paginatedProducts.length > 0 ? (
         <>
           <motion.div
@@ -283,71 +275,6 @@ const Home = () => {
                       New Drop
                     </span>
                   )}
-=======
-      ) : products.length > 0 ? (
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 lg:gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          {products.map((product, index) => (
-            <motion.div
-              key={product._id || index}
-              className="border border-gray-100 rounded-xl overflow-hidden flex flex-col min-h-[400px] sm:min-h-[430px] shadow-sm hover:shadow-md transition-shadow duration-200 bg-white group"
-              variants={itemVariants}
-              whileHover={{
-                y: -5,
-                transition: { duration: 0.2, ease: "easeOut" },
-              }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <div className="w-full h-48 sm:h-56 overflow-hidden rounded-t-xl relative">
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                {product.isFeatured && (
-                  <motion.span
-                    initial={{ x: "100%" }}
-                    animate={{ x: "0%" }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 100,
-                      damping: 10,
-                      delay: 0.1,
-                    }}
-                    className="absolute top-4 right-4 text-xs font-semibold text-white bg-blue-500 rounded-full px-3 py-1 shadow-md"
-                  >
-                    Featured
-                  </motion.span>
-                )}
-              </div>
-
-              <div className="p-5 flex flex-col flex-grow">
-                <h2 className="text-lg sm:text-xl font-semibold text-gray-800 line-clamp-1 mb-1">
-                  {product.title}
-                </h2>
-                <p className="text-sm text-gray-600 line-clamp-2 mb-3 leading-snug">
-                  {product.description}
-                </p>
-                <p className="text-gray-500 text-xs mb-3 font-medium uppercase tracking-wide">
-                  Brand:{" "}
-                  <span className="font-semibold text-gray-700">
-                    {product.brand}
-                  </span>
-                </p>
-
-                <div className="flex justify-between items-center mt-auto pt-4 border-t border-gray-100">
-                  <span className="text-gray-900 font-bold text-xl">
-                    PKR: {product.price.toFixed(2)}
-                  </span>
-                  <span className="text-yellow-500 text-sm font-semibold flex items-center">
-                    <span className="mr-1">⭐</span> {product.rating} (
-                    {product.reviews})
-                  </span>
->>>>>>> ff8573d85917c6ea07d4dc1df699d5d9c17a1e67
                 </div>
 
                 <div className="p-5 flex flex-col">
@@ -455,6 +382,8 @@ const Home = () => {
           </p>
         </div>
       )}
+
+      {/* Footer section */}
       <div className="flex justify-center items-center w-full py-10 my-5 bg-gradient-to-b from-gray-50 to-white">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
